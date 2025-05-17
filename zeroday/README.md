@@ -1,4 +1,6 @@
-<img src="https://github.com/kur0gir1/ZeroDay/blob/main/zeroday/public/ZeroDayLogo.png" alt="Logo" width="300px">
+<div align="center">
+  <img src="https://github.com/kur0gir1/ZeroDay/blob/main/zeroday/public/ZeroDayLogo.png" alt="Logo" width="300px">
+</div>
 
 # ZeroDay Protocol - Game Design Document (GDD)
 
