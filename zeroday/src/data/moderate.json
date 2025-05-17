@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "question": "What will `typeof NaN` return in JavaScript?",
+    "options": ["NaN", "undefined", "number", "object"],
+    "answer": 2,
+    "points": 2
+  },
+  {
+    "id": 2,
+    "question": "Which method is used to remove the last element from an array?",
+    "options": ["shift()", "pop()", "splice()", "remove()"],
+    "answer": 1,
+    "points": 2
+  },
+  {
+    "id": 3,
+    "question": "What does `===` mean in JavaScript?",
+    "options": ["Assignment operator", "Value equality", "Strict equality", "Type coercion equality"],
+    "answer": 2,
+    "points": 2
+  },
+  {
+    "id": 4,
+    "question": "What is the output of `console.log('5' - 3)`?",
+    "options": ["2", "53", "undefined", "NaN"],
+    "answer": 0,
+    "points": 2
+  },
+  {
+    "id": 5,
+    "question": "Which HTML attribute is used to reference an external CSS file?",
+    "options": ["style", "src", "href", "link"],
+    "answer": 2,
+    "points": 2
+  },
+  {
+    "id": 6,
+    "question": "Which CSS unit is relative to the root element?",
+    "options": ["em", "px", "rem", "%"],
+    "answer": 2,
+    "points": 2
+  },
+  {
+    "id": 7,
+    "question": "What will `Array(3).fill(0)` return?",
+    "options": ["[3, 3, 3]", "[0, 0, 0]", "[undefined, undefined, undefined]", "[]"],
+    "answer": 1,
+    "points": 2
+  },
+  {
+    "id": 8,
+    "question": "Which of the following is NOT a JavaScript data type?",
+    "options": ["Symbol", "Float", "Undefined", "BigInt"],
+    "answer": 1,
+    "points": 2
+  },
+  {
+    "id": 9,
+    "question": "What is the output of `typeof null`?",
+    "options": ["null", "object", "undefined", "boolean"],
+    "answer": 1,
+    "points": 2
+  },
+  {
+    "id": 10,
+    "question": "Which of these is a valid way to create a new object in JavaScript?",
+    "options": ["let obj = []", "let obj = {}", "let obj = Object()", "All of the above except []"],
+    "answer": 3,
+    "points": 2
+  },
+  {
+    "id": 11,
+    "question": "What does `document.querySelectorAll('div')` return?",
+    "options": ["A single div", "An array of divs", "A NodeList of divs", "An HTMLCollection of divs"],
+    "answer": 2,
+    "points": 2
+  },
+  {
+    "id": 12,
+    "question": "What does `event.preventDefault()` do?",
+    "options": ["Stops event propagation", "Cancels default browser behavior", "Stops script execution", "Removes element"],
+    "answer": 1,
+    "points": 2
+  },
+  {
+    "id": 13,
+    "question": "What happens when you compare `null == undefined`?",
+    "options": ["true", "false", "TypeError", "NaN"],
+    "answer": 0,
+    "points": 2
+  },
+  {
+    "id": 14,
+    "question": "Which method is used to merge two arrays in JavaScript?",
+    "options": ["concat()", "merge()", "push()", "join()"],
+    "answer": 0,
+    "points": 2
+  },
+  {
+    "id": 15,
+    "question": "How do you add a class to an HTML element in JavaScript?",
+    "options": ["element.addClass('name')", "element.setAttribute('class')", "element.classList.add('name')", "element.class = 'name'"],
+    "answer": 2,
+    "points": 2
+  }
+]

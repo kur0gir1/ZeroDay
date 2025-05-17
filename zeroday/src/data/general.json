@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "question": "What is the capital of France?",
+    "options": ["Berlin", "Madrid", "Paris", "Rome"],
+    "answer": 2,
+    "points": 1
+  },
+  {
+    "id": 2,
+    "question": "How many legs does a spider have?",
+    "options": ["6", "8", "10", "12"],
+    "answer": 1,
+    "points": 1
+  },
+  {
+    "id": 3,
+    "question": "What is the largest planet in our solar system?",
+    "options": ["Mars", "Earth", "Jupiter", "Saturn"],
+    "answer": 2,
+    "points": 1
+  },
+  {
+    "id": 4,
+    "question": "Which animal is known as the 'King of the Jungle'?",
+    "options": ["Tiger", "Elephant", "Lion", "Cheetah"],
+    "answer": 2,
+    "points": 1
+  },
+  {
+    "id": 5,
+    "question": "Which ocean is the largest?",
+    "options": ["Atlantic", "Indian", "Pacific", "Arctic"],
+    "answer": 2,
+    "points": 1
+  },
+  {
+    "id": 6,
+    "question": "What do bees produce?",
+    "options": ["Wax", "Milk", "Honey", "Juice"],
+    "answer": 2,
+    "points": 1
+  },
+  {
+    "id": 7,
+    "question": "How many days are in a leap year?",
+    "options": ["365", "366", "364", "367"],
+    "answer": 1,
+    "points": 1
+  },
+  {
+    "id": 8,
+    "question": "Which continent is Egypt located in?",
+    "options": ["Asia", "Europe", "Africa", "South America"],
+    "answer": 2,
+    "points": 1
+  },
+  {
+    "id": 9,
+    "question": "What is H2O commonly known as?",
+    "options": ["Salt", "Air", "Water", "Hydrogen"],
+    "answer": 2,
+    "points": 1
+  },
+  {
+    "id": 10,
+    "question": "How many colors are there in a rainbow?",
+    "options": ["5", "6", "7", "8"],
+    "answer": 2,
+    "points": 1
+  },
+  {
+    "id": 11,
+    "question": "Which fruit is known to keep doctors away?",
+    "options": ["Banana", "Apple", "Grapes", "Orange"],
+    "answer": 1,
+    "points": 1
+  },
+  {
+    "id": 12,
+    "question": "What is the name of the fairy in Peter Pan?",
+    "options": ["Bellatrix", "Fay", "Tinker Bell", "Luna"],
+    "answer": 2,
+    "points": 1
+  },
+  {
+    "id": 13,
+    "question": "Which country is famous for the pyramids?",
+    "options": ["Mexico", "Greece", "Egypt", "China"],
+    "answer": 2,
+    "points": 1
+  },
+  {
+    "id": 14,
+    "question": "How many hours are there in two days?",
+    "options": ["24", "36", "48", "72"],
+    "answer": 2,
+    "points": 1
+  },
+  {
+    "id": 15,
+    "question": "What is the name of the planet we live on?",
+    "options": ["Mars", "Venus", "Earth", "Neptune"],
+    "answer": 2,
+    "points": 1
+  },
+  {
+    "id": 16,
+    "question": "What do you call a baby dog?",
+    "options": ["Kitten", "Calf", "Puppy", "Cub"],
+    "answer": 2,
+    "points": 1
+  },
+  {
+    "id": 17,
+    "question": "What color is the sun?",
+    "options": ["Yellow", "Red", "White", "Blue"],
+    "answer": 0,
+    "points": 1
+  },
+  {
+    "id": 18,
+    "question": "What shape has three sides?",
+    "options": ["Circle", "Triangle", "Square", "Rectangle"],
+    "answer": 1,
+    "points": 1
+  },
+  {
+    "id": 19,
+    "question": "Which season comes after summer?",
+    "options": ["Winter", "Spring", "Autumn", "Rainy"],
+    "answer": 2,
+    "points": 1
+  },
+  {
+    "id": 20,
+    "question": "What does a thermometer measure?",
+    "options": ["Speed", "Length", "Temperature", "Volume"],
+    "answer": 2,
+    "points": 1
+  }
+]

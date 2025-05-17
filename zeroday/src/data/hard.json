@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "question": "What is the output of the following code?\n\n```js\nconst arr = [1, 2, 3];\narr[10] = 99;\nconsole.log(arr.length);\n```",
+    "options": ["3", "11", "10", "4"],
+    "answer": 1,
+    "points": 3
+  },
+  {
+    "id": 2,
+    "question": "Which method will NOT mutate the original array?",
+    "options": ["splice", "sort", "filter", "reverse"],
+    "answer": 2,
+    "points": 3
+  },
+  {
+    "id": 3,
+    "question": "What is wrong with this loop?\n\n```js\nfor (var i = 0; i < 5; i++) {\n  setTimeout(() => console.log(i), 0);\n}\n```",
+    "options": [
+      "Nothing",
+      "It throws an error",
+      "It prints 0 to 4",
+      "It prints 5 five times"
+    ],
+    "answer": 3,
+    "points": 3
+  },
+  {
+    "id": 4,
+    "question": "Given the array:\n\n```js\nconst nums = [1, 2, 3, 4];\nconst output = nums.reduce((acc, val) => acc + val * acc);\n```\nWhat is `output`?",
+    "options": ["24", "120", "NaN", "Error"],
+    "answer": 0,
+    "points": 3
+  },
+  {
+    "id": 5,
+    "question": "What's the final value of `result`?\n\n```js\nconst arr = [10, 20, 30];\nlet result = arr.map((x, i) => arr[i + 1] - x);\n```",
+    "options": [
+      "[10, 10, NaN]",
+      "[10, 10, undefined]",
+      "[10, 10]",
+      "[undefined, undefined, undefined]"
+    ],
+    "answer": 0,
+    "points": 3
+  },
+  {
+    "id": 6,
+    "question": "What is the bug here?\n\n```js\nconst input = [1, 2, 3];\nfor (let i in input) {\n  if (input[i] % 2 === 0) delete input[i];\n}\nconsole.log(input);\n```",
+    "options": [
+      "delete removes the index",
+      "delete does nothing in arrays",
+      "delete removes the value, leaving holes",
+      "delete removes entire array"
+    ],
+    "answer": 2,
+    "points": 3
+  },
+  {
+    "id": 7,
+    "question": "What will be the value of `result`?\n\n```js\nconst result = [1, 2, 3].find(x => x > 5) || [4, 5, 6].find(x => x > 5);\n```",
+    "options": ["undefined", "6", "5", "3"],
+    "answer": 1,
+    "points": 3
+  },
+  {
+    "id": 8,
+    "question": "Why is this loop infinite?\n\n```js\nlet i = 0;\nwhile (i != 10) {\n  i += 0.2;\n}\n```",
+    "options": [
+      "Because of an off-by-one error",
+      "i will eventually be NaN",
+      "i never exactly equals 10 due to floating-point precision",
+      "i is being reset each time"
+    ],
+    "answer": 2,
+    "points": 3
+  },
+  {
+    "id": 9,
+    "question": "What will be logged?\n\n```js\nconst arr = [1, 2, 3, 4];\narr.forEach(async (num) => {\n  await new Promise(r => setTimeout(r, 100));\n  console.log(num);\n});\n```",
+    "options": [
+      "1 2 3 4 with 100ms delay between each",
+      "Nothing logs because `forEach` doesn't await",
+      "1 2 3 4 printed instantly",
+      "Error due to async in forEach"
+    ],
+    "answer": 1,
+    "points": 3
+  },
+  {
+    "id": 10,
+    "question": "What's the output?\n\n```js\nconst arr = [1, 2, 3];\nconst out = arr.map(async x => x * 2);\nconsole.log(out);\n```",
+    "options": [
+      "[2, 4, 6]",
+      "Promise { <pending> }",
+      "Array of Promises",
+      "[undefined, undefined, undefined]"
+    ],
+    "answer": 2,
+    "points": 3
+  },
+  {
+    "id": 11,
+    "question": "What is the value of `final`?\n\n```js\nlet final = [1, 2, 3].filter(x => {\n  if (x !== 2) return;\n  return true;\n});\n```",
+    "options": ["[2]", "[1,3]", "[]", "undefined"],
+    "answer": 2,
+    "points": 3
+  },
+  {
+    "id": 12,
+    "question": "What's the correct way to deep clone an array of objects?",
+    "options": [
+      "arr.map(x => Object.assign({}, x))",
+      "arr.slice()",
+      "[...arr]",
+      "JSON.parse(JSON.stringify(arr))"
+    ],
+    "answer": 3,
+    "points": 3
+  },
+  {
+    "id": 13,
+    "question": "What's wrong with this code?\n\n```js\nconst nums = [1, 2, 3];\nfor (let num of nums) {\n  nums.push(num * 2);\n}\n```",
+    "options": [
+      "It modifies during iteration — infinite loop",
+      "It throws an error",
+      "It's syntactically invalid",
+      "Nothing is wrong"
+    ],
+    "answer": 0,
+    "points": 3
+  },
+  {
+    "id": 14,
+    "question": "What is the output?\n\n```js\nconst arr = new Array(3);\narr.map((_, i) => i);\n```",
+    "options": [
+      "[0, 1, 2]",
+      "[]",
+      "[undefined, undefined, undefined]",
+      "TypeError"
+    ],
+    "answer": 1,
+    "points": 3
+  },
+  {
+    "id": 15,
+    "question": "What does this log?\n\n```js\nconst a = [1, 2, 3];\na.length = 0;\nconsole.log(a[0]);\n```",
+    "options": ["1", "undefined", "null", "Throws error"],
+    "answer": 1,
+    "points": 3
+  }
+]

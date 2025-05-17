@@ -1,12 +1,68 @@
-# React + Vite
+![Logo](https://github.com/kur0gir1/ZeroDay/blob/main/zeroday/public/ZeroDayLogo.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ZeroDay Protocol - Game Design Document (GDD)
 
-Currently, two official plugins are available:
+## Overview
+ZeroDay Protocol is a cyberpunk-style quiz game that challenges players with confusing multiple-choice questions about IT security and tech, but with a twist: the game actively messes with the player's experience by glitching the UI, screwing with timers, and scrambling answers.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You're not just answering questions — you're battling a hostile system that doesn't want you to win.
 
-## Expanding the ESLint configuration
+## Objective
+- Enter your hacker alias.
+- Answer questions across four difficulty categories (General, Easy, Moderate, Hard) with tricky, misleading options.
+- Survive system glitches designed to disrupt your focus.
+- Score points based on accuracy and question difficulty.
+- Beat the clock — but watch out, because the clock might cheat on you.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Core Gameplay & Mechanics
+
+### Question Categories:
+- **General** — 5 questions
+- **Easy** — 10 questions
+- **Moderate** — 5 questions
+- **Hard** — 3 questions
+
+### Question Format
+- Confusing Multiple-Choice Questions: 4 options, only one right answer, all designed to fuck with your brain.
+
+### Timer System
+- Each question starts with a base timer (e.g., 15s), but glitches randomly shorten time unexpectedly.
+
+### Points:
+- General: 5 points/question
+- Easy: 10 points/question
+- Moderate: 20 points/question
+- Hard: 30 points/question
+
+### Glitch Effects (The Main Feature)
+These happen randomly during the game, making it a hell of a lot harder to just brute force your way through:
+
+- **Screen Blackout**: The screen goes black for ~5 seconds, blocking all input and forcing player to rely on memory or guess.
+- **Glitched Answers**: Text for answers gets scrambled, distorted, or replaced with gibberish, forcing players to really pay attention.
+- **Timer Tampering**: The countdown timer randomly speeds up or skips seconds, making time management a nightmare.
+- **Input Delay**: Slight delays on button clicks to simulate lag.
+- **Flickering UI Elements**: Borders, text, buttons flicker or shift positions briefly to mess with focus.
+- **Random Sound Glitches**: (future) Static, glitch noises to ramp tension.
+
+## Game Flow
+1. **Landing Page → Rules → Player Name Input**
+   - Player starts with their alias.
+2. **Quiz Game**
+   - Questions flow category by category, with glitch effects dropping bombs randomly between or during questions.
+3. **End Screen**
+   - Summary of score, accuracy, and maybe a taunt from the system.
+
+## Technologies
+- React.js + Context API for state management.
+- Framer Motion for glitch and UI animations.
+- Tailwind CSS for dark cyberpunk styling.
+- React Router for page navigation.
+
+## Roadmap & Extras
+- Add power-ups to reduce glitches or extend time.
+- Leaderboard with player stats.
+- Multiplayer mode with sabotage mechanics.
+- Sound & visual glitch enhancements.
+
+## Summary
+ZeroDay Protocol is more than a quiz game. It's a high-stress, mind-bending hacking simulator where the system fights dirty — messing with your vision, timing, and sanity. Only the sharpest minds survive.
