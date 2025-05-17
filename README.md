@@ -5,13 +5,13 @@
 # ZeroDay Protocol - Game Design Document (GDD)
 
 ## Overview
-ZeroDay Protocol is a cyberpunk-style quiz game that challenges players with confusing multiple-choice questions about IT security and tech, but with a twist: the game actively messes with the player's experience by glitching the UI, screwing with timers, and scrambling answers.
+ZeroDay Protocol is a cyberpunk-style quiz game that challenges players with confusing multiple-choice questions about IT, but with a twist: the game actively messes with the player's experience by glitching the UI, screwing with timers, and scrambling answers.
 
 You're not just answering questions — you're battling a hostile system that doesn't want you to win.
 
 ## Objective
 - Enter your hacker alias.
-- Answer questions across four difficulty categories (General, Easy, Moderate, Hard) with tricky, misleading options.
+- Answer questions across four difficulty categories (General, Easy, Moderate, Hard).
 - Survive system glitches designed to disrupt your focus.
 - Score points based on accuracy and question difficulty.
 - Beat the clock — but watch out, because the clock might cheat on you.
@@ -25,7 +25,7 @@ You're not just answering questions — you're battling a hostile system that do
 - **Hard** — 3 questions
 
 ### Question Format
-- Confusing Multiple-Choice Questions: 4 options, only one right answer, all designed to fuck with your brain.
+- Confusing Multiple-Choice Questions: 4 options, only one right answer, all designed to mess with your brain.
 
 ### Timer System
 - Each question starts with a base timer (e.g., 15s), but glitches randomly shorten time unexpectedly.
