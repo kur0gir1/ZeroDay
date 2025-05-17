@@ -1,4 +1,4 @@
-![Logo](https://github.com/kur0gir1/ZeroDay/blob/main/zeroday/public/ZeroDayLogo.png)
+<img src="https://github.com/kur0gir1/ZeroDay/blob/main/zeroday/public/ZeroDayLogo.png" alt="Logo" width="300px">
 
 # ZeroDay Protocol - Game Design Document (GDD)
 
