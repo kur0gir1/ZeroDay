@@ -7,11 +7,19 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependency directories
 node_modules
 dist
 dist-ssr
-package-lock.json
+
+# Local environment files
 *.local
+.env
+.env.*.local
+
+# Vite build output
+.vite
+.cache
 
 # Editor directories and files
 .vscode/*
@@ -23,3 +31,24 @@ package-lock.json
 *.njsproj
 *.sln
 *.sw?
+
+# MacOS system files
+._*
+Thumbs.db
+
+# Optional npm cache directory
+.npm
+
+# Yarn Integrity file
+.yarn-integrity
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# Coverage directory
+coverage
+
+# Temporary files
+*.tmp
+*.temp
