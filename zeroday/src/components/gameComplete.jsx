@@ -16,8 +16,8 @@ export default function GameOver() {
         {/* Game Over Container */}
         <div className="w-full max-w-4xl border border-lime-400 rounded-lg p-8 shadow-lg flex flex-col justify-center items-center text-center">
           <img
-          src="../../public/gameComplete.png"
-          alt="GameOver"
+          src="/gameComplete.png"
+          alt="GameComplete"
           className="w-[150px] mb-6 glitch"
         />
           {/* Header */}
