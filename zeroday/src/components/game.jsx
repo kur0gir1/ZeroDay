@@ -1,8 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { usePlayer } from "../context/playerContext";
 import { useNavigate } from "react-router-dom";
-import { GeneralQuestions, EasyQuestions, ModerateQuestions, HardQuestions } from "../data/questions";
+import {
+  GeneralQuestions,
+  EasyQuestions,
+  ModerateQuestions,
+  HardQuestions,
+} from "../data/questions";
 
 export default function Game() {
   const navigate = useNavigate();
@@ -23,12 +29,25 @@ export default function Game() {
 
   useEffect(() => {
     // Shuffle and filter questions only once during initialization
-    const generalQuestions = new GeneralQuestions().getAllQuestions({ shuffle: true }).slice(0, 5);
-    const easyQuestionsSet = new EasyQuestions().getAllQuestions({ shuffle: true }).slice(0, 5);
-    const moderateQuestionsSet = new ModerateQuestions().getAllQuestions({ shuffle: true }).slice(0, 3);
-    const hardQuestionsSet = new HardQuestions().getAllQuestions({ shuffle: true }).slice(0, 3);
+    const generalQuestions = new GeneralQuestions()
+      .getAllQuestions({ shuffle: true })
+      .slice(0, 5);
+    const easyQuestionsSet = new EasyQuestions()
+      .getAllQuestions({ shuffle: true })
+      .slice(0, 5);
+    const moderateQuestionsSet = new ModerateQuestions()
+      .getAllQuestions({ shuffle: true })
+      .slice(0, 3);
+    const hardQuestionsSet = new HardQuestions()
+      .getAllQuestions({ shuffle: true })
+      .slice(0, 3);
 
-    setAllQuestions([...generalQuestions, ...easyQuestionsSet, ...moderateQuestionsSet, ...hardQuestionsSet]);
+    setAllQuestions([
+      ...generalQuestions,
+      ...easyQuestionsSet,
+      ...moderateQuestionsSet,
+      ...hardQuestionsSet,
+    ]);
   }, []); // Empty dependency array ensures this runs only once
 
   const currentQuestion = allQuestions[currentQuestionIndex];
@@ -51,8 +70,9 @@ export default function Game() {
   useEffect(() => {
     if (timeLeft === 0 && !hasTimedOut) {
       setHasTimedOut(true); // Prevent multiple triggers
-      handleWrongAnswer();
+      handleWrongAnswer(true); // Pass a flag to indicate timeout
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeft, hasTimedOut]);
 
   useEffect(() => {
@@ -85,10 +105,14 @@ export default function Game() {
     setTimeout(() => goToNextQuestion(), 1000); // Move to the next question after a delay
   };
 
-  const handleWrongAnswer = () => {
+  const handleWrongAnswer = (isTimeout = false) => {
     setHealth((prev) => Math.max(0, prev - 20)); // Deduct health
     setFlashRed(true); // Trigger red screen flash
     setTimeout(() => setFlashRed(false), 500); // Remove flash after 500ms
+
+    if (isTimeout) {
+      setTimeout(() => goToNextQuestion(), 1000); // Move to the next question after a delay
+    }
   };
 
   const goToNextQuestion = () => {
@@ -104,7 +128,9 @@ export default function Game() {
   };
 
   if (!currentQuestion) {
-    return <div className="text-center text-lime-400">Loading questions...</div>;
+    return (
+      <div className="text-center text-lime-400">Loading questions...</div>
+    );
   }
 
   return (
@@ -155,7 +181,7 @@ export default function Game() {
           {/* Health */}
           <div className="flex items-center ml-4">
             <span className="text-xl mr-2 font-momoska">HEALTH:</span>
-            <div className="w-48 bg-gray-800 h-6 border border-lime-400">
+            <div className="w-48 bg-black h-6 border border-lime-400">
               <motion.div
                 className="bg-lime-600 h-full"
                 initial={{ width: `${health}%` }}
@@ -167,17 +193,37 @@ export default function Game() {
           </div>
         </div>
 
+        {/* Breaching Progress Bar */}
+        <div className="w-full bg-black h-7 mt-2 border border-lime-400">
+          <motion.div
+            className="bg-lime-600 h-full"
+            initial={{
+              width: `${(currentQuestionIndex / allQuestions.length) * 100}%`,
+            }}
+            animate={{
+              width: `${(currentQuestionIndex / allQuestions.length) * 100}%`,
+            }}
+            transition={{ duration: 0.5 }}
+          />
+        </div>
+        <div className="text-right text-sm text-lime-300 mt-1">
+          Breaching Progress:{" "}
+          {Math.round((currentQuestionIndex / allQuestions.length) * 100)}%
+        </div>
+
         {/* Centered Question Box */}
         <div
-          className="flex-grow flex items-center justify-center"
+          className="flex-grow flex items-center justify-center focus:outline-none"
           ref={questionRef}
-          tabIndex={-1} // For accessibility focus
+          tabIndex={-1}
         >
           <div className="p-6 border-2 border-lime-400 min-w-[60vw] max-w-[90vw]">
             <h4 className="text-xl mb-4 font-monoska text-lime-300 uppercase">
               {currentQuestion.category}
             </h4>
-            <h2 className="text-2xl mb-6 font-monoska">{currentQuestion.question}</h2>
+            <h2 className="text-2xl mb-6 font-monoska">
+              {currentQuestion.question}
+            </h2>
 
             {/* Answer Options */}
             <div className="grid grid-cols-1 gap-4 mt-6">
