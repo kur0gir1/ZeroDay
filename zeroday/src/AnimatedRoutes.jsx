@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import LandingPage from "./pages/landingPage";
 import RulesPage from "./pages/rulesPage";
 import PlayerNamePage from "./pages/playerNamePage";
+import GamePage from "./pages/gamePage";
 
 const pageVariants = {
   initial: {
@@ -40,57 +41,74 @@ const pageTransition = {
 
 function AnimatedRoutes() {
   const location = useLocation();
-
+  
   return (
-    <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route
-          path="/"
-          element={
-            <motion.div
-              initial="initial"
-              animate="in"
-              exit="out"
-              variants={pageVariants}
-              transition={pageTransition}
-              style={{ height: "100%" }}
-            >
-              <LandingPage />
-            </motion.div>
-          }
-        />
-        <Route
-          path="/rules"
-          element={
-            <motion.div
-              initial="initial"
-              animate="in"
-              exit="out"
-              variants={pageVariants}
-              transition={pageTransition}
-              style={{ height: "100%" }}
-            >
-              <RulesPage />
-            </motion.div>
-          }
-        />
-        <Route
-          path="/start"
-          element={
-            <motion.div
-              initial="initial"
-              animate="in"
-              exit="out"
-              variants={pageVariants}
-              transition={pageTransition}
-              style={{ height: "100%" }}
-            >
-              <PlayerNamePage />
-            </motion.div>
-          }
-        />
-      </Routes>
-    </AnimatePresence>
+    <>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route
+            path="/"
+            element={
+              <motion.div
+                initial="initial"
+                animate="in"
+                exit="out"
+                variants={pageVariants}
+                transition={pageTransition}
+                style={{ height: "100%" }}
+              >
+                <LandingPage />
+              </motion.div>
+            }
+          />
+          <Route
+            path="/rules"
+            element={
+              <motion.div
+                initial="initial"
+                animate="in"
+                exit="out"
+                variants={pageVariants}
+                transition={pageTransition}
+                style={{ height: "100%" }}
+              >
+                <RulesPage />
+              </motion.div>
+            }
+          />
+          <Route
+            path="/start"
+            element={
+              <motion.div
+                initial="initial"
+                animate="in"
+                exit="out"
+                variants={pageVariants}
+                transition={pageTransition}
+                style={{ height: "100%" }}
+              >
+                <PlayerNamePage />
+              </motion.div>
+            }
+          />
+          <Route
+            path="/game"
+            element={
+              <motion.div
+                initial="initial"
+                animate="in"
+                exit="out"
+                variants={pageVariants}
+                transition={pageTransition}
+                style={{ height: "100%" }}
+              >
+                <GamePage />
+              </motion.div>
+            }
+          />
+        </Routes>
+      </AnimatePresence>
+    </>
   );
 }
 

@@ -1,142 +1,162 @@
 [
   {
     "id": 1,
+    "category": "Easy",
     "question": "What does HTML stand for?",
     "options": ["Hyper Text Markup Language", "High Tech Modern Language", "Home Tool Markup Language", "Hyper Transfer Markup Language"],
     "answer": 0,
-    "points": 1
+    "points": 10
   },
   {
     "id": 2,
+    "category": "Easy",
     "question": "Which tag is used to create a hyperlink in HTML?",
     "options": ["<link>", "<a>", "<href>", "<hyper>"],
     "answer": 1,
-    "points": 1
+    "points": 10
   },
   {
     "id": 3,
+    "category": "Easy",
     "question": "Which HTML element is used to insert a line break?",
     "options": ["<break>", "<br>", "<lb>", "<newline>"],
     "answer": 1,
-    "points": 1
+    "points": 10
   },
   {
     "id": 4,
+    "category": "Easy",
     "question": "What is the correct file extension for JavaScript files?",
     "options": [".js", ".java", ".javascript", ".jv"],
     "answer": 0,
-    "points": 1
+    "points": 10
   },
   {
     "id": 5,
+    "category": "Easy",
     "question": "Which language is used to style a web page?",
     "options": ["HTML", "JQuery", "CSS", "XML"],
     "answer": 2,
-    "points": 1
+    "points": 10
   },
   {
     "id": 6,
+    "category": "Easy",
     "question": "What does CSS stand for?",
     "options": ["Creative Style Sheets", "Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Syntax"],
     "answer": 1,
-    "points": 1
+    "points": 10
   },
   {
     "id": 7,
+    "category": "Easy",
     "question": "Which HTML tag is used for the largest heading?",
     "options": ["<heading>", "<h1>", "<head>", "<h6>"],
     "answer": 1,
-    "points": 1
+    "points": 10
   },
   {
     "id": 8,
+    "category": "Easy",
     "question": "Which of the following is a correct comment in JavaScript?",
     "options": ["<!-- comment -->", "// comment", "# comment", "/* comment */"],
     "answer": 1,
-    "points": 1
+    "points": 10
   },
   {
     "id": 9,
+    "category": "Easy",
     "question": "Which keyword is used to declare a variable in JavaScript?",
     "options": ["var", "int", "let", "All of the above"],
     "answer": 3,
-    "points": 1
+    "points": 10
   },
   {
     "id": 10,
+    "category": "Easy",
     "question": "How do you create an array in JavaScript?",
     "options": ["let arr = {}", "let arr = []", "let arr = ()", "let arr = <>"],
     "answer": 1,
-    "points": 1
+    "points": 10
   },
   {
     "id": 11,
+    "category": "Easy",
     "question": "Which property is used to change the text color in CSS?",
     "options": ["text-color", "color", "font-color", "style"],
     "answer": 1,
-    "points": 1
+    "points": 10
   },
   {
     "id": 12,
+    "category": "Easy",
     "question": "How do you write an 'if' statement in JavaScript?",
     "options": ["if i = 5 then", "if i == 5 {}", "if (i == 5)", "if: i == 5"],
     "answer": 2,
-    "points": 1
+    "points": 10
   },
   {
     "id": 13,
+    "category": "Easy",
     "question": "Which HTML tag is used to display an image?",
     "options": ["<img>", "<image>", "<pic>", "<photo>"],
     "answer": 0,
-    "points": 1
+    "points": 10
   },
   {
     "id": 14,
+    "category": "Easy",
     "question": "Which of the following is a looping structure in JavaScript?",
     "options": ["if", "while", "for", "both while and for"],
     "answer": 3,
-    "points": 1
+    "points": 10
   },
   {
     "id": 15,
+    "category": "Easy",
     "question": "What does the `console.log()` function do?",
     "options": ["Displays a popup", "Logs to the terminal", "Writes to the console", "Sends data to server"],
     "answer": 2,
-    "points": 1
+    "points": 10
   },
   {
     "id": 16,
+    "category": "Easy",
     "question": "Which operator is used for assignment in JavaScript?",
     "options": ["==", "=", "===", ":="],
     "answer": 1,
-    "points": 1
+    "points": 10
   },
   {
     "id": 17,
+    "category": "Easy",
     "question": "How do you write a comment in CSS?",
     "options": ["// comment", "/* comment */", "# comment", "<!-- comment -->"],
     "answer": 1,
-    "points": 1
+    "points": 10
   },
   {
     "id": 18,
+    "category": "Easy",
     "question": "What is the default display value of a <div> element?",
     "options": ["inline", "block", "inline-block", "none"],
     "answer": 1,
-    "points": 1
+    "points": 10
   },
   {
     "id": 19,
+    "category": "Easy",
     "question": "Which of these is a boolean value in JavaScript?",
     "options": ["true", "yes", "1", "'true'"],
     "answer": 0,
-    "points": 1
+    "points": 10
   },
   {
     "id": 20,
+    "category": "Easy",
     "question": "Which symbol is used to access properties of an object in JavaScript?",
     "options": [".", "->", "::", "#"],
     "answer": 0,
-    "points": 1
+    "points": 10
   }
 ]
