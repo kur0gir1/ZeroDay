@@ -68,3 +68,63 @@ These happen randomly during the game, making it a hell of a lot harder to just 
 
 ## Summary
 ZeroDay Protocol is more than a quiz game. It's a high-stress, mind-bending hacking simulator where the system fights dirty — messing with your vision, timing, and sanity. Only the sharpest minds survive.
+
+## How to Use ZeroDay
+
+### Prerequisites
+Make sure you have the following installed on your system:
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kur0gir1/ZeroDay.git
+   cd ZeroDay/zeroday
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Game
+1. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+2. Open your browser and navigate to the URL provided by Vite (e.g., `http://localhost:5173`).
+
+### Building for Production
+To create a production build of the game:
+```bash
+npm run build
+```
+The build files will be located in the `dist` directory.
+
+### Previewing the Production Build
+To preview the production build locally:
+```bash
+npm run preview
+```
+
+### Testing
+To run tests (if available):
+```bash
+npm test
+```
+
+### Linting
+To check for code style issues:
+```bash
+npm run lint
+```
+
+### Deployment
+You can deploy the production build to any static hosting service like [Netlify](https://www.netlify.com/) or [Vercel](https://vercel.com/).
+
+```bash
+npm run build
+```
+Then upload the contents of the `dist` directory to your hosting service.

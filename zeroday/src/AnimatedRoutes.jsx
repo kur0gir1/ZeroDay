@@ -6,6 +6,8 @@ import LandingPage from "./pages/landingPage";
 import RulesPage from "./pages/rulesPage";
 import PlayerNamePage from "./pages/playerNamePage";
 import GamePage from "./pages/gamePage";
+import GameOverPage from "./pages/gameOverPage";
+import GameCompletePage from "./pages/gameCompletePage";
 
 const pageVariants = {
   initial: {
@@ -103,6 +105,36 @@ function AnimatedRoutes() {
                 style={{ height: "100%" }}
               >
                 <GamePage />
+              </motion.div>
+            }
+          />
+          <Route
+            path="/gameOver"
+            element={
+              <motion.div
+                initial="initial"
+                animate="in"
+                exit="out"
+                variants={pageVariants}
+                transition={pageTransition}
+                style={{ height: "100%" }}
+              >
+                <GameOverPage />
+              </motion.div>
+            }
+          />
+          <Route
+            path="/gameComplete"
+            element={
+              <motion.div
+                initial="initial"
+                animate="in"
+                exit="out"
+                variants={pageVariants}
+                transition={pageTransition}
+                style={{ height: "100%" }}
+              >
+                <GameCompletePage />
               </motion.div>
             }
           />
