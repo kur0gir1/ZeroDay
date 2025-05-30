@@ -26,7 +26,7 @@ export default function Landing(){
 
         {/* Footer */}
         <footer className="text-xs text-lime-700 mt-16 select-none">
-          ZeroDay &mdash; v0.01 &mdash; Cyber Ops Initiated
+          ZeroDay &mdash; v1.00 &mdash; Cyber Ops Initiated
         </footer>
       </div>
     </>
