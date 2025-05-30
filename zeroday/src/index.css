@@ -43,10 +43,33 @@
   animation: glitch 5s infinite;
 }
 
+@keyframes cursor-glitch {
+  0%, 100% {
+    cursor: url('/cursor-hacker.png'), auto;
+  }
+  40% {
+    cursor: url('/cursor-hacker-glitch.png'), auto;
+  }
+  60% {
+    cursor: url('/cursor-hacker.png'), auto;
+  }
+  80% {
+    cursor: url('/cursor-hacker-glitch.png'), auto;
+  }
+}
+
+.glitch-cursor {
+  animation: cursor-glitch 1.2s steps(2, end) infinite;
+}
+
 body {
   cursor: url('/cursor-hacker.png'), auto;
 }
 
+button:hover, a:hover, [role="button"]:hover, .cursor-pointer:hover {
+  animation: cursor-glitch 1.2s steps(2, end) infinite;
+}
+
 button, a, [role="button"], .cursor-pointer, .cursor-default, .cursor-auto, .cursor-move, .cursor-not-allowed, .cursor-wait {
-  cursor: url('/cursor-hacker.png'), auto !important;
+  cursor: url('/cursor-hacker.png'), auto;
 }
