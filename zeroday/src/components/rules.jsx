@@ -27,7 +27,7 @@ export default function Rules() {
             <h2 className="text-2xl font-monoska underline">Objective</h2>
             <p className="mt-2">
               Complete as many challenges as possible under time pressure. Every
-              correct answer levels you up. Every mistake? Critical delay.
+              correct answer increases you breaching progress. Every mistake? Critical delay.
             </p>
           </section>
 
@@ -35,9 +35,9 @@ export default function Rules() {
           <section className="mb-6">
             <h2 className="text-2xl font-monoska underline">Rules</h2>
             <ul className="list-disc list-inside mt-2 space-y-1">
-              <li>You have a limited time per question (20 seconds).</li>
+              <li>You have a limited time per question (30 seconds).</li>
               <li>No going back once you answer. Think fast.</li>
-              <li>Scores are final unless the system crashes (lol).</li>
+              <li>Scores are final unless the system crashes (HAHAHAHAHAHAHAHA).</li>
             </ul>
           </section>
 
@@ -47,8 +47,8 @@ export default function Rules() {
               Winning Conditions
             </h2>
             <ul className="list-disc list-inside mt-2 space-y-1">
-              <li>Answer streaks = bonus score</li>
-              <li>Fastest time = bragging rights</li>
+              <li>Get the breaching progress to 100%</li>
+              <li>The ZeroDay Protocol will stop you. You are not meant to win.</li>
               <li>Finish without a mistake? daw indi amo haw.</li>
             </ul>
           </section>

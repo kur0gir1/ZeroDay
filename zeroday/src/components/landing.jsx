@@ -13,7 +13,7 @@ export default function Landing(){
 
         {/* Tagline */}
         <p className="text-xl font-reno text-lime-300 mb-12 max-w-xl text-center">
-          Decrypt the truth before time runs out.
+          Beat the system before it beats you.
         </p>
 
         {/* Start Button */}

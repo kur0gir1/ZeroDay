@@ -163,5 +163,125 @@
     "options": ["1", "undefined", "null", "Throws error"],
     "answer": 1,
     "points": 30
+  },
+  {
+    "id": 16,
+    "category": "Hard",
+    "question": "What does this log?\n\n```js\nconsole.log(typeof null);\n```",
+    "options": ["'null'", "'object'", "'undefined'", "'number'"],
+    "answer": 1,
+    "points": 30
+  },
+  {
+    "id": 17,
+    "category": "Hard",
+    "question": "What is the result?\n\n```js\nlet x = 0.1 + 0.2 === 0.3;\nconsole.log(x);\n```",
+    "options": ["true", "false", "undefined", "Throws error"],
+    "answer": 1,
+    "points": 30
+  },
+  {
+    "id": 18,
+    "category": "Hard",
+    "question": "What will be logged?\n\n```js\nconsole.log([...'hello']);\n```",
+    "options": ["['hello']", "['h', 'e', 'l', 'l', 'o']", "['h', 'hello']", "Error"],
+    "answer": 1,
+    "points": 30
+  },
+  {
+    "id": 19,
+    "category": "Hard",
+    "question": "What does this output?\n\n```js\nconst obj = { a: 1 };\nObject.freeze(obj);\nobj.a = 2;\nconsole.log(obj.a);\n```",
+    "options": ["1", "2", "undefined", "Throws error"],
+    "answer": 0,
+    "points": 30
+  },
+  {
+    "id": 20,
+    "category": "Hard",
+    "question": "What is the output?\n\n```js\nlet a = [1, 2, 3];\nlet b = a;\na = [4, 5, 6];\nconsole.log(b);\n```",
+    "options": ["[1, 2, 3]", "[4, 5, 6]", "undefined", "Throws error"],
+    "answer": 0,
+    "points": 30
+  },
+  {
+    "id": 21,
+    "category": "Hard",
+    "question": "A man is looking at a picture of someone. His friend asks, 'Who is it you are looking at?' The man replies, 'Brothers and sisters, I have none. But the father of that person in the picture is my father's son.' Who is in the picture?",
+    "options": ["His son", "His father", "His uncle", "Himself"],
+    "answer": 0,
+    "points": 30
+  },
+  {
+    "id": 22,
+    "category": "Hard",
+    "question": "Which number comes next in the sequence: 2, 6, 12, 20, 30, ?",
+    "options": ["36", "40", "42", "56"],
+    "answer": 2,
+    "points": 30
+  },
+  {
+    "id": 23,
+    "category": "Hard",
+    "question": "You see a house with two doors. One door leads to certain death, the other to freedom. Two guards know which is which: one always tells the truth, the other always lies. You can ask one guard one question. What do you ask?",
+    "options": ["Which door would the other guard say leads to freedom?", "Is the left door safe?", "Which door do you guard?", "Can I go through both doors?"],
+    "answer": 0,
+    "points": 30
+  },
+  {
+    "id": 24,
+    "category": "Hard",
+    "question": "What English word retains the same pronunciation, even after you take away four of its five letters?",
+    "options": ["Queue", "Aisle", "Eight", "Knot"],
+    "answer": 0,
+    "points": 30
+  },
+  {
+    "id": 25,
+    "category": "Hard",
+    "question": "A train leaves New York at 8:00 AM heading west at 90 mph. Another train leaves Los Angeles at 8:00 AM heading east at 110 mph. The distance between the cities is 2,800 miles. When they meet, which train is closer to New York?",
+    "options": ["The New York train", "The Los Angeles train", "They are the same distance", "Impossible to tell"],
+    "answer": 2,
+    "points": 30
+  },
+  {
+    "id": 26,
+    "category": "Hard",
+    "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
+    "options": ["An echo", "A shadow", "A cloud", "A wave"],
+    "answer": 0,
+    "points": 30
+  },
+  {
+    "id": 27,
+    "category": "Hard",
+    "question": "You measure my life in hours and I serve you by expiring. I'm quick when I'm thin and slow when I'm fat. The wind is my enemy. What am I?",
+    "options": ["A candle", "A clock", "A shadow", "A leaf"],
+    "answer": 0,
+    "points": 30
+  },
+  {
+    "id": 28,
+    "category": "Hard",
+    "question": "I have cities, but no houses. I have mountains, but no trees. I have water, but no fish. What am I?",
+    "options": ["A map", "A dream", "A desert", "A painting"],
+    "answer": 0,
+    "points": 30
+  },
+  {
+    "id": 29,
+    "category": "Hard",
+    "question": "What disappears as soon as you say its name?",
+    "options": ["Silence", "A secret", "A shadow", "A wish"],
+    "answer": 0,
+    "points": 30
+  },
+  {
+    "id": 30,
+    "category": "Hard",
+    "question": "The more of this there is, the less you see. What is it?",
+    "options": ["Darkness", "Fog", "Light", "Snow"],
+    "answer": 0,
+    "points": 30
   }
 ]

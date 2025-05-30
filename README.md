@@ -1,11 +1,11 @@
 <div align="center">
-  <img src="https://github.com/kur0gir1/ZeroDay/blob/main/zeroday/public/ZeroDayTextLogo.png" alt="Logo" width="800px">
+   <img src="https://github.com/kur0gir1/ZeroDay/blob/main/zeroday/public/ZeroDayTextLogo.png" alt="Logo" width="800px">
 </div>
 
 # ZeroDay Protocol - Game Design Document (GDD)
 
 ## Overview
-ZeroDay Protocol is a cyberpunk-style quiz game that challenges players with confusing multiple-choice questions about IT, but with a twist: the game actively messes with the player's experience by glitching the UI, screwing with timers, and scrambling answers.
+ZeroDay Protocol is a cyberpunk-style quiz game that challenges players with confusing multiple-choice questions about IT and random things, but with a twist: the game actively messes with the player's experience by glitching the UI, screwing with timers, and scrambling answers.
 
 You're not just answering questions — you're battling a hostile system that doesn't want you to win.
 
@@ -28,7 +28,7 @@ You're not just answering questions — you're battling a hostile system that do
 - Confusing Multiple-Choice Questions: 4 options, only one right answer, all designed to mess with your brain.
 
 ### Timer System
-- Each question starts with a base timer (e.g., 15s), but glitches randomly shorten time unexpectedly.
+- Each question starts with a base timer of 30 seconds, but glitches randomly shorten time unexpectedly.
 
 ### Points:
 - General: 5 points/question
@@ -44,7 +44,21 @@ These happen randomly during the game, making it a hell of a lot harder to just 
 - **Timer Tampering**: The countdown timer randomly speeds up or skips seconds, making time management a nightmare.
 - **Input Delay**: Slight delays on button clicks to simulate lag.
 - **Flickering UI Elements**: Borders, text, buttons flicker or shift positions briefly to mess with focus.
-- **Random Sound Glitches**: (future) Static, glitch noises to ramp tension.
+- **Screen Blackout**: The screen goes black, blocking all input and forcing the player to rely on memory or guess.
+- **Glitched Answers**: Answer text is scrambled, distorted, or replaced with gibberish.
+- **Timer Tampering**: The countdown timer randomly speeds up or skips seconds.
+- **Input Delay**: Button clicks are delayed to simulate lag.
+- **Flickering UI Elements**: Borders, text, and buttons flicker or shift positions.
+- **Question Swap**: The current question is swapped with a random one for a few seconds.
+- **Answer Shuffle**: The order of answer options is shuffled multiple times.
+- **Reverse Controls**: The order of answer buttons is reversed, confusing navigation.
+- **Phantom Click**: A random answer is automatically selected as if the player clicked it.
+- **Screen Flip**: The entire game screen is flipped upside down.
+- **Input Lock**: All input is temporarily disabled, making the game unresponsive.
+- **Fake Progress**: The progress bar displays fake, random progress.
+- **Font Corruption**: Text fonts become corrupted and hard to read.
+- **Color Inversion**: The game's colors are inverted for a disorienting effect.
+- **Answer Disappear**: Some or all answer options temporarily disappear.
 
 ## Game Flow
 1. **Landing Page → Rules → Player Name Input**
@@ -59,12 +73,6 @@ These happen randomly during the game, making it a hell of a lot harder to just 
 - Framer Motion for glitch and UI animations.
 - Tailwind CSS for dark cyberpunk styling.
 - React Router for page navigation.
-
-## Roadmap & Extras
-- Add power-ups to reduce glitches or extend time.
-- Leaderboard with player stats.
-- Multiplayer mode with sabotage mechanics.
-- Sound & visual glitch enhancements.
 
 ## Summary
 ZeroDay Protocol is more than a quiz game. It's a high-stress, mind-bending hacking simulator where the system fights dirty — messing with your vision, timing, and sanity. Only the sharpest minds survive.

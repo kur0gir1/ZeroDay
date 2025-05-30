@@ -42,3 +42,11 @@
 .glitch {
   animation: glitch 5s infinite;
 }
+
+body {
+  cursor: url('/cursor-hacker.png'), auto;
+}
+
+button, a, [role="button"], .cursor-pointer, .cursor-default, .cursor-auto, .cursor-move, .cursor-not-allowed, .cursor-wait {
+  cursor: url('/cursor-hacker.png'), auto !important;
+}
