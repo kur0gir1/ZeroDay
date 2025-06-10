@@ -129,10 +129,6 @@ export default function Game() {
     timeRef.current = setInterval(() => {
       setTimeLeft((prev) => Math.max(0, prev - 1));
     }, 1000);
-      console.log(
-    "Correct answer:",
-    currentQuestion.options[currentQuestion.answer]
-  );
   }, [currentQuestionIndex, currentQuestion]);
 
   useEffect(() => {
