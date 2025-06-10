@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { usePlayer } from "../context/playerContext";
 import { useNavigate } from "react-router-dom";
+import { supabase } from "../supabaseClient";
 
 export default function GameOver() {
   const context = usePlayer();
@@ -13,7 +14,9 @@ export default function GameOver() {
     glitchHistory = [],
     correctAnswers = 0,
     allQuestions = [],
+    totalTime,
   } = context || {};
+  const { resetPlayer } = usePlayer();
   const totalQuestions = allQuestions.length || 1;
   // Glitches survived should be the number of unique glitch types encountered
   const uniqueGlitches = Array.from(new Set(glitchHistory.map((g) => g.name)));
@@ -27,6 +30,24 @@ export default function GameOver() {
   const answeredQuestions = allQuestions.slice(0, correctAnswers);
   const hardest = answeredQuestions.find((q) => q.category === "Hard");
   const navigate = useNavigate();
+
+  async function saveScore() {
+    const { data, error } =
+    await supabase.from("leaderboard").insert([
+      {
+        player_name: playerName,
+        points,
+        total_time: totalTime,
+      },
+    ]);
+    if (error) {
+    console.error("Supabase insert error:", error.message, error);
+    alert("Failed to save score: " + error.message);
+  }
+    if (data) {
+      console.log("Score saved successfully:", data);
+    }
+  }
 
   return (
     <>
@@ -67,6 +88,10 @@ export default function GameOver() {
             <div className="mb-2">
               Final Score:{" "}
               <span className="text-red-300 font-bold">{points}</span>
+            </div>
+            <div className="mb-2">
+              Total Time:{" "}
+              <span className="text-lime-300 font-bold">{totalTime}s</span>
             </div>
             <div className="mb-2">
               Health Remaining:{" "}
@@ -158,7 +183,11 @@ export default function GameOver() {
           {/* Retry Button */}
           <div className="mt-10">
             <button
-              onClick={() => navigate("/")}
+              onClick={async () => {
+                await saveScore();
+                resetPlayer();
+                navigate("/");
+              }}
               className="border border-lime-400 rounded px-8 py-3 text-lg font-monoska hover:bg-lime-600 hover:text-black transition-colors duration-300"
             >
               Retry Breach

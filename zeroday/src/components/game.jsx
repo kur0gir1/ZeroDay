@@ -48,6 +48,8 @@ export default function Game() {
     setAllQuestions,
     correctAnswers,
     setCorrectAnswers,
+    // totalTime,
+    setTotalTime,
   } = context;
 
   // Remove local state for points, health, glitchHistory, progressIndex, allQuestions
@@ -82,6 +84,12 @@ export default function Game() {
 
   const timeRef = useRef(null);
   const questionRef = useRef(null);
+
+  useEffect(() =>{
+    const interval = setInterval(() =>
+      setTotalTime((t) => t + 1), 1000);
+      return () => clearInterval(interval);
+    }, [setTotalTime]);
 
   // On mount, initialize questions and context state
   useEffect(() => {
@@ -121,6 +129,10 @@ export default function Game() {
     timeRef.current = setInterval(() => {
       setTimeLeft((prev) => Math.max(0, prev - 1));
     }, 1000);
+      console.log(
+    "Correct answer:",
+    currentQuestion.options[currentQuestion.answer]
+  );
   }, [currentQuestionIndex, currentQuestion]);
 
   useEffect(() => {
@@ -158,10 +170,8 @@ export default function Game() {
     setHasTimedOut(false);
     if (currentQuestionIndex < allQuestions.length - 1) {
       setCurrentQuestionIndex((prev) => prev + 1);
-    } else if ((correctAnswers / allQuestions.length) * 100 >= 100) {
+    } else {
       navigate("/gameComplete");
-    } else if (allQuestions.length > currentQuestionIndex + 1) {
-      setCurrentQuestionIndex((prev) => prev + 1);
     }
   };
 

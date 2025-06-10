@@ -8,6 +8,7 @@ import PlayerNamePage from "./pages/playerNamePage";
 import GamePage from "./pages/gamePage";
 import GameOverPage from "./pages/gameOverPage";
 import GameCompletePage from "./pages/gameCompletePage";
+import Leaderboards from "./pages/leaderboardsPage";
 
 const pageVariants = {
   initial: {
@@ -60,6 +61,21 @@ function AnimatedRoutes() {
                 style={{ height: "100%" }}
               >
                 <LandingPage />
+              </motion.div>
+            }
+          />
+          <Route
+            path="/leaderboards"
+            element={
+              <motion.div
+                initial="initial"
+                animate="in"
+                exit="out"
+                variants={pageVariants}
+                transition={pageTransition}
+                style={{ height: "100%" }}
+              >
+                <Leaderboards />
               </motion.div>
             }
           />

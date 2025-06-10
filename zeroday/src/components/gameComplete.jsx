@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { usePlayer } from "../context/playerContext";
 import { useNavigate } from "react-router-dom";
+import { supabase } from "../supabaseClient";
 
 export default function GameComplete() {
   const context = usePlayer();
@@ -13,7 +14,9 @@ export default function GameComplete() {
     glitchHistory = [],
     correctAnswers = 0,
     allQuestions = [],
+    totalTime,
   } = context || {};
+  const { resetPlayer } = usePlayer();
   const totalQuestions = allQuestions.length || 1;
   // Glitches survived should be the number of unique glitch types encountered
   const uniqueGlitches = Array.from(new Set(glitchHistory.map((g) => g.name)));
@@ -28,6 +31,16 @@ export default function GameComplete() {
   const hardest = answeredQuestions.find((q) => q.category === "Hard");
   const navigate = useNavigate();
 
+  async function saveScore() {
+    await supabase.from("leaderboard").insert([
+      {
+        player_name: playerName,
+        points,
+        total_time: totalTime,
+      },
+    ]);
+  }
+
   return (
     <div className="min-h-screen bg-black text-lime-400 flex flex-col items-center justify-center font-reno">
       <div className="bg-black border-2 border-lime-400 rounded-lg p-8 shadow-xl max-w-lg w-full">
@@ -40,6 +53,9 @@ export default function GameComplete() {
         </div>
         <div className="mb-2">
           Final Score: <span className="text-lime-300 font-bold">{points}</span>
+        </div>
+        <div className="mb-2">
+          Total Time: <span className="text-lime-300 font-bold">{totalTime}s</span>
         </div>
         <div className="mb-2">
           Health Remaining:{" "}
@@ -124,7 +140,11 @@ export default function GameComplete() {
         </div>
         <div className="mt-6 text-center">
           <button
-            onClick={() => navigate("/")}
+            onClick={async() => {
+              await saveScore();
+              resetPlayer();
+              navigate("/");
+            }}
             className="bg-lime-400 text-black px-6 py-2 rounded font-bold hover:bg-lime-300 transition"
           >
             Breach Again
