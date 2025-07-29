@@ -95,21 +95,21 @@ export default function Game() {
   useEffect(() => {
     const generalQuestions = new GeneralQuestions()
       .getAllQuestions({ shuffle: true })
-      .slice(0, 5);
-    const easyQuestionsSet = new EasyQuestions()
-      .getAllQuestions({ shuffle: true })
-      .slice(0, 10);
-    const moderateQuestionsSet = new ModerateQuestions()
-      .getAllQuestions({ shuffle: true })
-      .slice(0, 5);
-    const hardQuestionsSet = new HardQuestions()
-      .getAllQuestions({ shuffle: true })
-      .slice(0, 3);
+      .slice(0, 20);
+    // const easyQuestionsSet = new EasyQuestions()
+    //   .getAllQuestions({ shuffle: true })
+    //   .slice(0, 10);
+    // const moderateQuestionsSet = new ModerateQuestions()
+    //   .getAllQuestions({ shuffle: true })
+    //   .slice(0, 5);
+    // const hardQuestionsSet = new HardQuestions()
+    //   .getAllQuestions({ shuffle: true })
+    //   .slice(0, 3);
     const questions = [
       ...generalQuestions,
-      ...easyQuestionsSet,
-      ...moderateQuestionsSet,
-      ...hardQuestionsSet,
+      // ...easyQuestionsSet,
+      // ...moderateQuestionsSet,
+      // ...hardQuestionsSet,
     ];
     setAllQuestions(questions);
     setPoints(0);

@@ -1,7 +1,7 @@
 const glitchOverlay = () => {
   return (
     <>
-      <video
+      {/* <video
         autoPlay
         loop
         muted
@@ -10,7 +10,7 @@ const glitchOverlay = () => {
         style={{ mixBlendMode: "screen", opacity: 0.3 }}
         src="/videos/glitch.mp4"
         type="video/mp4"
-      />
+      /> */}
     </>
   );
 };
